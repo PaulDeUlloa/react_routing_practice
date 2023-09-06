@@ -1,13 +1,14 @@
-import React from "react";
 import { useParams } from "react-router-dom";
+import React from "react";
 
 const Number = () => {
 
-    const{ number } = useParams();
+    const{ urlVar } = useParams();
+
 
     return(
         <div style={{width: "50%", textAlign: "center", margin: "0 auto"}}>
-            <h1>The number is: {number}</h1>
+            <h1>The { isNaN(urlVar) ? " word " : " number " } is: {urlVar}</h1>
 
         </div>
     );
